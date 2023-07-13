@@ -1,119 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+    <title>CZ Budget Calculator</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="main.js"></script>
-  <title>Earings and Expenses</title>
-</head>
-
-<body class="flex-center">
-  <h1>Budget Calculator for Students <br>in Czechia</h1>
-  <div class="container">
-    <div class="earnings container-child">
-      <h2>Earnings</h2>
-      <label for="hourlyRate">Hourly Wage</label>
-      <br />
-      <span class="row">
-        <input type="text" name="hourlyRate" id="hourlyRate" required />
-        <p class="currency">CZK</p>
-      </span>
-      <br />
-      <label for="hoursPerWeek">Hours per Week</label>
-      <br />
-      <span class="row">
-        <input type="text" name="hoursPerWeek" id="hoursPerWeek" required />
-        <p class="currency">CZK</p>
-      </span>
+  <body class="flex-center">
+    <h1>Budget Calculator for Students <br />in Czechia</h1>
+    <div class="container">
+      <div class="earnings container-child">
+        <h2>Earnings</h2>
+        <label for="hourlyRate">Hourly Wage</label>
+        <br />
+        <span class="row">
+          <input type="text" name="hourlyRate" id="hourlyRate" required />
+          <p class="currency">CZK</p>
+        </span>
+        <br />
+        <label for="hoursPerWeek">Hours per Week</label>
+        <br />
+        <span class="row">
+          <input type="text" name="hoursPerWeek" id="hoursPerWeek" required />
+          <p class="currency">CZK</p>
+        </span>
+      </div>
+      <div class="earnings container-child">
+        <h2>Expenses (Per month)</h2>
+        <label for="accomodationCost">Accomodation</label>
+        <br />
+        <span class="row">
+          <input type="text" name="accomodationCost" id="accomodationCost" />
+          <p class="currency">CZK</p>
+        </span>
+        <br />
+        <label for="foodCost">Food and Groceries</label>
+        <br />
+        <span class="row">
+          <input type="text" name="foodCost" id="foodCost" />
+          <p class="currency">CZK</p>
+        </span>
+        <br />
+        <label for="miscCost">Misc. Expenses</label>
+        <br />
+        <span class="row">
+          <input type="text" name="miscCost" id="miscCost" />
+          <p class="currency">CZK</p>
+        </span>
+      </div>
+      <a href="#earningsSection"><button id="calcBtn">Calculate</button></a>
     </div>
-    <div class="earnings container-child">
-      <h2>Expenses (Per month)</h2>
-      <label for="accomodationCost">Accomodation</label>
-      <br />
-      <span class="row">
-        <input type="text" name="accomodationCost" id="accomodationCost" />
-        <p class="currency">CZK</p>
-      </span>
-      <br />
-      <label for="foodCost">Food and Groceries</label>
-      <br />
-      <span class="row">
-        <input type="text" name="foodCost" id="foodCost" />
-        <p class="currency">CZK</p>
-      </span>
-      <br />
-      <label for="miscCost">Misc. Expenses</label>
-      <br />
-      <span class="row">
-        <input type="text" name="miscCost" id="miscCost" />
-        <p class="currency">CZK</p>
-      </span>
+    <!-- // Second Container -->
+    <div class="container">
+      <div class="earnings container-child">
+        <br />
+        <h2 id="earningsSection">Total Earings</h2>
+        <label for="earningsPerMonth">Earnings Per Month</label>
+        <br />
+        <span class="row">
+          <input type="text" name="earningsPerMonth" id="earningsPerMonth" />
+          <p class="currency">CZK</p>
+        </span>
+        <br />
+        <label for="earningsPerYear">Earings Per Year</label>
+        <br />
+        <span class="row">
+          <input type="text" name="earningsPerYear" id="earningsPerYear" />
+          <p class="currency">CZK</p>
+        </span>
+      </div>
+      <div class="earnings container-child">
+        <!-- Savings -->
+        <h2>Total Savings</h2>
+        <label for="expensePerMonth">Total Expenses Per Month</label>
+        <br />
+        <span class="row">
+          <input type="text" name="expensePerMonth" id="expensePerMonth" />
+          <p class="currency">CZK</p>
+        </span>
+        <br />
+        <label for="savingsPerMonth">Savings Per Month</label>
+        <br />
+        <span class="row">
+          <input type="text" name="savingsPerMonth" id="savingsPerMonth" />
+          <p class="currency">CZK</p>
+        </span>
+        <br />
+        <label for="savingsPerYear">Savings Per Year</label>
+        <br />
+        <span class="row">
+          <input type="text" name="savingsPerYear" id="savingsPerYear" />
+          <p class="currency">CZK</p>
+        </span>
+        <br />
+        <h2>Income Tax</h2>
+        <label for="taxPerYear">Income Tax (Per year)</label>
+        <br />
+        <span class="row">
+          <input type="text" name="taxPerYear" id="taxPerYear" />
+          <p class="currency">CZK</p>
+        </span>
+        <label for="netSavingsPerYear">Savings after Tax (Per Year)</label>
+        <br />
+        <span class="row">
+          <input type="text" name="netSavingsPerYear" id="netSavingsPerYear" />
+          <p class="currency">CZK</p>
+        </span>
+      </div>
     </div>
-    <a href="#earningsSection"><button id="calcBtn">Calculate</button></a>
-  </div>
-  <!-- // Second Container -->
-  <div class="container">
-    <div class="earnings container-child">
-      <br />
-      <h2 id="earningsSection">Total Earings</h2>
-      <label for="earningsPerMonth">Earnings Per Month</label>
-      <br />
-      <span class="row">
-        <input type="text" name="earningsPerMonth" id="earningsPerMonth" />
-        <p class="currency">CZK</p>
-      </span>
-      <br />
-      <label for="earningsPerYear">Earings Per Year</label>
-      <br />
-      <span class="row">
-        <input type="text" name="earningsPerYear" id="earningsPerYear" />
-        <p class="currency">CZK</p>
-      </span>
-    </div>
-    <div class="earnings container-child">
-      <!-- Savings -->
-      <h2>Total Savings</h2>
-      <label for="expensePerMonth">Total Expenses Per Month</label>
-      <br />
-      <span class="row">
-        <input type="text" name="expensePerMonth" id="expensePerMonth" />
-        <p class="currency">CZK</p>
-      </span>
-      <br />
-      <label for="savingsPerMonth">Savings Per Month</label>
-      <br />
-      <span class="row">
-        <input type="text" name="savingsPerMonth" id="savingsPerMonth" />
-        <p class="currency">CZK</p>
-      </span>
-      <br />
-      <label for="savingsPerYear">Savings Per Year</label>
-      <br />
-      <span class="row">
-        <input type="text" name="savingsPerYear" id="savingsPerYear" />
-        <p class="currency">CZK</p>
-      </span>
-      <br />
-      <h2>Income Tax</h2>
-      <label for="taxPerYear">Income Tax (Per year)</label>
-      <br />
-      <span class="row">
-        <input type="text" name="taxPerYear" id="taxPerYear" />
-        <p class="currency">CZK</p>
-      </span>
-      <label for="netSavingsPerYear">Savings after Tax (Per Year)</label>
-      <br />
-      <span class="row">
-        <input type="text" name="netSavingsPerYear" id="netSavingsPerYear" />
-        <p class="currency">CZK</p>
-      </span>
-    </div>
-  </div>
-  <footer>Made with &hearts; by Aveek</footer>
-</body>
-
+    <footer>Made with &hearts; by Aveek</footer>
+  </body>
 </html>
