@@ -25,7 +25,9 @@ btnClick.addEventListener("click", () => {
   expensePerMonth.value = +accomodationCost.value + +foodCost.value + +miscCost.value;
   savingsPerMonth.value = earningsPerMonth.value - expensePerMonth.value;
   savingsPerYear.value = savingsPerMonth.value * 12;
-  if (earningsPerYear <= 30840) {
+  if (earningsPerYear.value) {
+    taxPerMonth.value = 0;
+  } else if (0 <= earningsPerYear.value <= 30840) {
     taxPerMonth.value = 0;
   } else if (earningsPerYear >= 1935552) {
     taxPerYear.value = ((earningsPerYear.value - 30840) * 23) / 100;
