@@ -61,7 +61,7 @@ input[type=text] {
 label {
   color: rgba(0, 0, 0, 0.801);
   display: inline-block;
-  margin: 0.5rem auto;
+  margin: 0.5rem 0.5rem;
   font-weight: 400;
 }
 
@@ -147,6 +147,10 @@ footer {
   .row {
     width: 100%;
     gap: 5px;
+  }
+
+  label {
+    margin: 0.25rem 0.15rem;
   }
 
   input[type=text] {

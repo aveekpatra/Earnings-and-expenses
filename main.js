@@ -14,7 +14,7 @@ const savingsPerYear = document.getElementById("savingsPerYear");
 // Extras
 const taxPerYear = document.getElementById("taxPerYear");
 const netSavingsPerYear = document.getElementById("netSavingsPerYear");
-const hoursPerDay = document.getElementById("hoursPerDay");
+// const hoursPerDay = document.getElementById("hoursPerDay");
 
 // Eventlistners
 
@@ -35,5 +35,4 @@ btnClick.addEventListener("click", () => {
     taxPerYear.value = ((earningsPerYear.value - 30840) * 15) / 100;
   }
   netSavingsPerYear.value = earningsPerYear.value - expensePerMonth.value * 12 - taxPerYear.value;
-  hoursPerDay.value = hoursPerWeek.value / 4;
 });
