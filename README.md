@@ -1,4 +1,4 @@
-# earnings-and-expenses
+# Budget Calculator for Students in Czechia
 
 A simple web application that allows users to track their earnings, expenses, and savings.
 
