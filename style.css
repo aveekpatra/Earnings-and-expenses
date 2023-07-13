@@ -38,6 +38,7 @@ h1 {
   font-size: 1.5rem;
   margin: 2rem auto;
   text-align: center;
+
 }
 
 h2 {
@@ -135,18 +136,14 @@ footer {
 /* Misc. */
 
 @media screen and (max-width: 500px) {
-  .container {
-    width: 340px;
-    padding: 0.5rem 0.5rem;
+
+  body {
+    padding: 1rem 0.5rem;
   }
 
   h1 {
     margin: 1rem auto;
-  }
-
-  .row {
-    width: 100%;
-    gap: 5px;
+    max-width: 350px;
   }
 
   label {
@@ -157,7 +154,17 @@ footer {
     width: 100%;
   }
 
+  .container {
+    width: 380px;
+    padding: 0.5rem 0.25rem;
+  }
+
   .container-child {
     padding: 0.5rem;
+  }
+
+  .row {
+    width: 100%;
+    gap: 5px;
   }
 }
