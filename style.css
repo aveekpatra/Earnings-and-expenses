@@ -72,7 +72,7 @@ a {
 
 footer {
   color: white;
-  margin-top: 3rem;
+  margin: 3rem auto;
   display: block;
   text-align: center;
 }
@@ -127,6 +127,7 @@ footer {
   border-radius: var(--radius);
   touch-action: manipulation;
   transition: all 200ms ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #calcBtn:active {
@@ -138,12 +139,16 @@ footer {
 @media screen and (max-width: 500px) {
 
   body {
-    padding: 1rem 0.5rem;
+    padding: 1rem 0;
   }
 
   h1 {
-    margin: 1rem auto;
-    max-width: 350px;
+    margin: 1.5rem auto;
+    max-width: 70%;
+  }
+
+  h2 {
+    margin: 1.5rem auto;
   }
 
   label {
@@ -155,8 +160,8 @@ footer {
   }
 
   .container {
-    width: 350px;
-    padding: 0.5rem 0.25rem;
+    width: 95%;
+    padding: 0.5rem 0.45rem;
   }
 
   .container-child {
