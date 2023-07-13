@@ -11,6 +11,10 @@ const earningsPerYear = document.getElementById("earningsPerYear");
 const expensePerMonth = document.getElementById("expensePerMonth");
 const savingsPerMonth = document.getElementById("savingsPerMonth");
 const savingsPerYear = document.getElementById("savingsPerYear");
+// Extras
+const taxPerYear = document.getElementById("taxPerYear");
+const netPerYear = document.getElementById("netPerYear");
+const hoursPerDay = document.getElementById("hoursPerDay");
 
 // Eventlistners
 
@@ -21,4 +25,13 @@ btnClick.addEventListener("click", () => {
   expensePerMonth.value = +accomodationCost.value + +foodCost.value + +miscCost.value;
   savingsPerMonth.value = earningsPerMonth.value - expensePerMonth.value;
   savingsPerYear.value = savingsPerMonth.value * 12;
+  if (earningsPerYear <= 30840) {
+    taxPerMonth.value = 0;
+  } else if (earningsPerYear >= 1935552) {
+    taxPerYear.value = ((earningsPerYear.value - 30840) * 23) / 100;
+  } else {
+    taxPerYear.value = ((earningsPerYear.value - 30840) * 15) / 100;
+  }
+  netPerYear.value = earningsPerYear.value - taxPerYear.value;
+  hoursPerDay.value = hoursPerWeek.value / 4;
 });
