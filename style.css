@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Utility Classes */
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.self-center {
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Component Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(mediumslateblue, hotpink);
+  flex-direction: column;
+  gap: 1rem;
+  padding: 3rem 1rem;
+}
+
+h1 {
+  color: white;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+input {
+  padding: 0.75rem;
+  width: 85%;
+  margin: 0.25rem auto;
+  border-radius: 0.25rem;
+  border: none;
+  background-color: whitesmoke;
+  font-size: 1.15rem;
+}
+
+label {
+  color: rgba(0, 0, 0, 0.801);
+  display: inline-block;
+  margin: 0.5rem auto;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  color: white;
+}
+
+/* Custom */
+
+:root {
+  --radius: 0.75rem;
+}
+
+.container {
+  background-color: white;
+  height: fit-content;
+  width: 500px;
+  border-radius: var(--radius);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 2rem 0.5rem;
+}
+
+.container-child {
+  padding: 0.5rem 1.2rem;
+}
+
+.currency {
+  color: rgba(0, 0, 0, 0.684);
+  display: inline;
+  background-color: whitesmoke;
+  padding: 0.75rem;
+  font-size: 1.15rem;
+  border-radius: 0.25rem;
+}
+
+#calcBtn {
+  padding: 0.75rem 1.15rem;
+  width: auto;
+  min-width: 200px;
+  display: block;
+  margin: 1rem auto;
+  background-color: rgba(124, 104, 238, 0.891);
+  color: white;
+  font-size: 1.15rem;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--radius);
+  touch-action: manipulation;
+  transition: all 200ms ease-in-out;
+}
+
+#calcBtn:active {
+  transform: scaleX(0.95);
+}
+
+/* Misc. */
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 340px;
+  }
+
+  input {
+    width: 65%;
+  }
+}
